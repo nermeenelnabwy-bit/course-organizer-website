@@ -1,105 +1,144 @@
 @import url('https://fonts.googleapis.com/css2?family=Amiri&display=swap');
-*{
+
+html, body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow: hidden;
+    height: 100vh; 
+    overflow-x: hidden;
 }
 
-h1{
-    text-align:center;
-    padding-top: 80px;
+body {
+    font-family: 'inter', sans-serif, arial;
+    background: url("ChatGPT Image Apr 16, 2026, 09_08_35 PM.png");
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: 35% auto; 
+    background-color: #596b70;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+
+h1 {
+    text-align: center;
+    padding-top: 60px;
     font-family: plus jakarta sans;
-    font-size: 60px;
+    font-size: 45px; 
     line-height: 1.2;
     letter-spacing: -0.02em;
     color: #460b05;   
 }
-nav{
+
+nav {
     position: fixed;
     right: 20px;
     top: 20px;
     width: auto;
-    height: 60px;
+    height: auto;
     padding: 0;
     margin: 0;
-    border-radius: 12px;
-    font-size: 25px;
+    font-size: 22px;
     z-index: 1000;
-    box-shadow: o 4px 15px rgba(0, 0, 0, 0.1);
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
 }
-h2{
+
+h2 {
    color: #131720;
+   margin-bottom: 10px;
 }
-h3{
+
+h3 {
    color: #131720; 
+   margin-bottom: 10px;
 }
+
 nav ul {
     display: flex;
     gap: 15px;
     margin: 0;
     padding: 0;
+    list-style: none;
 }
-nav ul li a{
+
+nav ul li a {
     text-decoration: none;
-    padding: 12px 20px;
+    padding: 10px 15px;
     border-radius: 10px;
     color: #293949;
-    
+    font-weight: bold;
+    transition: 0.3s ease;
 }
-nav ul li a:hover{
-    color:#ffd700;
+
+nav ul li a:hover {
+    color: #ffd700;
     background-color: rgb(66, 84, 100);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
-.arabic{
+
+.arabic {
     font-family: Amiri;
 }
-body{
-    font-family: 'inter',sans-serif,arial;
-    height: 100%;
-    background: url("ChatGPT Image Apr 16, 2026, 09_08_35 PM.png");
-    background-repeat: no-repeat;
-    background-position: bottom right;
-    background-size: 40% auto;
-    background-color: #596b70;
-    background-attachment: fixed;
-    align-items: center;
+
+.welcome {
+    font-size: 22px;
+    padding: 20px 0; 
+    text-align: center; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
     justify-content: center;
-    margin: 0;
-    padding: 0;
+    width: 100%;
+    margin: 0 auto;
 }
-.welcome{
-    font-size: 25px;
-    padding-top: 5%;
-    padding-left: 5%;
+
+.welcome p {
+    text-align: center;
+    width: 100%;
+    margin: 10px 0;
 }
-.h{
+.h {
     margin-left: 10%;
+    font-size: 20px;
 }
-table{
+
+table {
     width: 80%;
     border-collapse: collapse;
-    margin: 0 auto 20px auto;
-    margin-top: 4%;
+    margin: 2% auto 15px auto;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     overflow: hidden; 
+}
 
-}
-th,td{
-    padding: 12px 15px;
+th, td {
+    padding: 10px 15px; 
     text-align: left;
-    
 }
-th{
+
+th {
     background-color: #2c3e50;
     color: #202020;
     font-weight: bold;
     text-transform: uppercase;
 }
-td:hover{
+
+td:hover {
     background-color: #86a2c2;
 }
+
 .add {
     display: block;
     padding: 10px 20px;
@@ -109,133 +148,166 @@ td:hover{
     border-radius: 5px;
     text-decoration: none;
     font-weight: 900;
-    transition: 0.3 ease; 
-    background-color:#2c3e50;
+    transition: 0.3s ease; 
+    background-color: #2c3e50;
     color: #202020;
-    
 }
-.add:hover{
+
+.add:hover {
     background-color: #86a2c2;
     color: #fff;
 }
-.q{
+
+.q {
     display: block;
-    font-size: 30px;
-    margin-top: 40px;
-    margin-bottom: 20px;
+    font-size: 26px;
+    margin: 15px auto;
     text-align: center;
+    width: 100%;
 }
-section{
+section {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    background: rbba(255, 255, 255, 0.2);
-    
 }
-.form-group{
-    width: 300px;
+
+.contact-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    color: #131720;
+    margin-top: 10px;
+}
+
+form {
+    width: 100%;
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-group {
+    width: 100%;
     text-align: left;
 }
-.form-group label{
+.form-group label {
     display: block;
     font-weight: bold;
-    color: #2c3e50;
-}
-.form-group input, .form-group textarea{
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+    color: #131720; 
+    margin-top: 12px;
+    margin-bottom: 5px;
     font-size: 16px;
 }
-.add-btn{
+
+.form-group label i {
+    color: #2c3e50;
+    margin-right: 6px;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #2c3e50; 
+    border-radius: 8px;
+    font-size: 15px;
+    background-color: #ffffff; 
+    color: #131720;
+    outline: none;
+}
+.form-group input::placeholder, 
+.form-group textarea::placeholder {
+    color: #757575;
+    opacity: 1;
+}
+.form-group input:focus, 
+.form-group textarea:focus {
+    border-color: #ffd700; 
+    box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+}
+.add-btn {
     padding: 12px;
     border: none;
     border-radius: 8px;
     background-color: #2c3e50;
-    color: #202020;
+    color: #ffffff; 
     font-weight: bold;
+    font-size: 16px;
     cursor: pointer;
     transition: 0.3s ease;
-}
-.add-btn:hover{
-    background-color: #86a2c2;
-    color: #fff;
-}
-.q2{
-    padding-bottom: 10%;
-    display: block;
-    font-size: 30px;
-    text-align: center;
-    
-}
-div{
-    text-align:center;
-    padding-top:11%;
-    font-family: open-sans;
-    font-size: 25px;
-    line-height: 1.7;
-    
-}
-.x{
-    text-align:center;
-    padding-top:2%;
-    bottom: 0;
-    font-family:'inter',sans-serif;
-    font-size: small;
-    opacity: 0.8; 
-}
-
-.y{
     width: 100%;
-    position: fixed;
-    text-align:center;
-    padding-top: 3%;
-    bottom: 0;
-    font-family:'inter',sans-serif;
+    margin-top: 15px;
+}
+
+.add-btn:hover {
+    background-color: #86a2c2;
+    color: #ffffff;
+}
+.q2 {
+    display: block;
+    font-size: 26px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+div {
+    text-align: center;
+    font-family: open-sans;
+    font-size: 22px;
+    line-height: 1.5;
+    padding-top: 2%; 
+}
+.x, .y, .z, footer {
+    text-align: center;
+    font-family: 'inter', sans-serif;
     font-size: small;
     opacity: 0.8;
+    padding: 10px 0; 
+    width: 100%;
+    margin-top: auto;
 }
-.z{
-    text-align:center;
-    padding-top:14%;
-    bottom: 0;
-    font-family:'inter',sans-serif;
-    font-size: small;
-    opacity: 0.8;
-}
-footer{  
-    text-align:center;
-    bottom: 0;
-    padding-top:17%;
-    font-family:'inter',sans-serif;
-    font-size: small;
-    opacity: 0.8;
-}
-@media(max-width:765px){
-    form{
-        width: 50%;
+
+@media(max-width: 765px) {
+    body {
+        background-size: 45% auto;
     }
-    table{
-        font-size: 12px;
-        th,td{
-            padding: 5px;
-        }
+    nav {
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
     }
-
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+    nav ul {
+        justify-content: center;
+        gap: 8px;
+    }
+    nav ul li a {
+        padding: 6px 10px;
+        font-size: 14px;
+    }
+    h1 {
+        font-size: 28px;
+        padding-top: 70px;
+    }
+    form {
+        width: 85%;
+    }
+    table {
+        width: 95%;
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
 }
-
-.item {
-  flex: 1 1 200px;
-}.container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 10px;
+.form-group label i, 
+.contact-box p i, 
+h1 i, h2 i, h3 i {
+    margin-right: 8px;
+    margin-left: 5px;
 }
-
 
